@@ -63,13 +63,59 @@ class RegisterViewController: UIViewController {
             myAlert(titleString: "คุนไม่ได้ใส่ข้อความให้ครบ", messageString: "ช่วยใส่ให้ครบด้วยครับ")
         } else {
             print("No Space")
-            
+            uploadDataToServer(name: name, user: user, password: password)
         }
+        
         
 
         
         
     } // uploadButton
+    
+    //process upload data to server
+    func uploadDataToServer(name:String,user:String,password:String) -> Void{
+        
+        let urlString = "https://www.androidthai.in.th/ssm/addDataSun.php?isAdd=true&Name=\(name)&User=\(user)&Password=\(password)"
+        
+        let url = URL(string: urlString)
+        
+        let request = NSMutableURLRequest(url: url!)
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data,response,error in
+            if error != nil {
+                print("Have Error")
+            }else{
+                
+                
+                if let testReadAble = data {
+                    
+                    let canReadData = NSString(data: testReadAble, encoding: String.Encoding.utf8.rawValue)
+                    print("CanReadData ==>> \(String(describing: canReadData)) ")
+                    
+                    let myResult = canReadData!
+                    if myResult == "true" {
+                        
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "BackToAuthen", sender: nil)
+                        }
+                        
+                    }
+                    
+                    
+                    
+                    
+                }else{
+                   print("Can not Read Able")
+                }//if no.2
+                
+            }// if no.1
+        }// END TASK
+        task.resume()
+        
+        
+        
+        
+        
+    } // upload data
     
     
     // myAlert is Void type Function คือเมธอด ที่ทำงานแล้วไม่คืนค่ากลับมา
