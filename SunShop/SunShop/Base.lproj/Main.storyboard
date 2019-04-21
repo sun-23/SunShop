@@ -1,15 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Shop View Controller-->
+        <scene sceneID="Whw-65-gYG">
+            <objects>
+                <viewController id="ECs-i7-z30" customClass="ShopViewController" customModule="SunShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQD-yr-9rV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXm-ZG-8Ua">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="tO9-v1-KHw">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Ed7-O4-Ym2">
+                                            <connections>
+                                                <action selector="LogoutButton:" destination="ECs-i7-z30" id="SpE-7d-z1h"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Uzg-Yz-sX6"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShopToAuthen" id="AuS-3Z-1vB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCe-Rd-jhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="790"/>
+        </scene>
         <!--Authen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -112,6 +145,7 @@
                         <outlet property="PasswordTextField" destination="RTN-ff-Kch" id="EUt-Se-ZIc"/>
                         <outlet property="UserTextField" destination="ddr-07-aJI" id="UxR-UD-rbw"/>
                         <segue destination="hAS-BH-13h" kind="show" identifier="GoToRegister" id="jcu-VW-OIn"/>
+                        <segue destination="ECs-i7-z30" kind="show" identifier="GoToShop" id="VS2-43-mQu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -205,7 +239,10 @@
     <resources>
         <image name="ArrowBack" width="36" height="36"/>
         <image name="CloudUpload" width="36" height="36"/>
-        <image name="logo" width="170" height="170"/>
-        <image name="wallper" width="341" height="227"/>
+        <image name="logo" width="170.5" height="170.5"/>
+        <image name="wallper" width="341" height="227.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AuS-3Z-1vB"/>
+    </inferredMetricsTieBreakers>
 </document>

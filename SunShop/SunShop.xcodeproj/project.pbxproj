@@ -13,6 +13,7 @@
 		6486134F2265AA480003A518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6486134D2265AA480003A518 /* Main.storyboard */; };
 		648613512265AA490003A518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648613502265AA490003A518 /* Assets.xcassets */; };
 		648613542265AA490003A518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648613522265AA490003A518 /* LaunchScreen.storyboard */; };
+		A4B8DD61226CAF2500686AF5 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8DD60226CAF2500686AF5 /* ShopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		648613502265AA490003A518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		648613532265AA490003A518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		648613552265AA490003A518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B8DD60226CAF2500686AF5 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				648613492265AA480003A518 /* AppDelegate.swift */,
 				6486134B2265AA480003A518 /* ViewController.swift */,
 				6486134D2265AA480003A518 /* Main.storyboard */,
+				A4B8DD60226CAF2500686AF5 /* ShopViewController.swift */,
 				6403300F2265BC11005FEBB7 /* RegisterViewController.swift */,
 				648613502265AA490003A518 /* Assets.xcassets */,
 				648613522265AA490003A518 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B8DD61226CAF2500686AF5 /* ShopViewController.swift in Sources */,
 				640330102265BC11005FEBB7 /* RegisterViewController.swift in Sources */,
 				6486134C2265AA480003A518 /* ViewController.swift in Sources */,
 				6486134A2265AA480003A518 /* AppDelegate.swift in Sources */,

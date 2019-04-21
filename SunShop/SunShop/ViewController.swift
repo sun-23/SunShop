@@ -90,6 +90,11 @@ class ViewController: UIViewController,UITextFieldDelegate {
                 if password == truePassword {
                     print("Welcome to app")
                     
+                    DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "GoToShop", sender: nil)
+                        
+                    }
+                    
                 } else{
                     self.myAlert(title: "Password False", message: "Plese Try Again")
                 }
