@@ -96,7 +96,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
                     }
                     
                 } else{
+                    DispatchQueue.main.async {
                     self.myAlert(title: "Password False", message: "Plese Try Again")
+                    }
                 }
                 
                 
@@ -104,7 +106,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
             } catch let myError {
                 DispatchQueue.main.async {
                     print(myError)
-                    self.myAlert(title: "User False", message: "No \(user)in my Database")
+                    self.myAlert(title: "User False", message: "No \(user) in my Database")
                 }
             }
             
